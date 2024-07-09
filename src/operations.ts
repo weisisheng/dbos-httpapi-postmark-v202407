@@ -28,7 +28,6 @@ const logger = winston.createLogger({
   transports: [new winston.transports.Console()],
 });
 
-// The schema of the database table used in this example.
 export interface postmark_email {
   friend: string;
   content: string;
