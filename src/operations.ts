@@ -54,8 +54,6 @@ export class Greeting {
   }
 
   // this is the decorator and function setup for the email send
-  // notice the use of the communicator wrapper which is ....
-
   // this wrapper is used for connecting with 3rd party services
   @Communicator()
   static async SendGreetingEmail(
