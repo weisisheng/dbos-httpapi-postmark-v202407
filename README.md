@@ -2,7 +2,7 @@
 
 This is a toy [DBOS app](https://docs.dbos.dev/) example focusing on remote deployment to DBOS Cloud (their hosted solution with a generous free tier for devs).
 
-The repo sets up two simple HTTP API endpoints that: 1) send an email using Postmark ESP when you hit `/sendemail/:friend/:content` endpoint and 2) inserts a record into a postgres d'base instance and retrieves the records when you visit the `/emails` endpoint.
+The repo sets up two simple HTTP API endpoints that: 1) sends an email using Postmark ESP when you hit `/sendemail/:friend/:content` endpoint and 2) inserts a record into a postgres d'base instance and retrieves the records when you visit the `/emails` endpoint.
 
 ## Prerequisites
 
@@ -48,15 +48,15 @@ First, visit `https://<username>-<app-name>.cloud.dbos.dev/sendemail/friend/cont
 
 Then visit `https://<username>-<app-name>.cloud.dbos.dev/emails` to retrieve the records from the d'base.
 
-9. To delete the app online,`npx dbos-cloud app delete [applicantion-name] --dropdb`. Remove the '--dropdb' parameter if you want to retain the database table.
+9. To delete the app online,`npx dbos-cloud app delete [application-name] --dropdb`. Remove the '--dropdb' parameter if you want to retain the database table.
 
 ## Some caveats:
 
-- **The endpoint is not secure**, and anyone can send an email if they guess the randomly assigned endpoint. You should add some sort of authentication to the endpoint to prevent abuse.
+- **The endpoint is not secure**, and anyone can send an email if they guess the assigned endpoint. You should add some sort of authentication to the endpoint to prevent abuse.
 
 Here are some instructions for that: https://docs.dbos.dev/tutorials/authentication-authorization
 
-- When building workflows with DBOS, consider creating the respective standalone functions, then wrapping them in an Httpapi decorator / function, then trying to wrap all that in a @ workflow which will orchestrate a bunch of cool built-in features.
+- When building workflows with DBOS, consider creating the respective standalone functions, then wrapping them in an Httpapi decorator / function, then wrap all that in a @workflow which will add a bunch of cool built-in features.
 
 -- granular observability
 -- guaranteed only once execution
