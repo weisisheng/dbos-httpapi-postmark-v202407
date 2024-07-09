@@ -113,7 +113,7 @@ export class Greeting {
     return rows.rows;
   }
 
-  // here is the final function which ties the workflow all together and sets up an api endpoitnt to psot to
+  // here is the final function which ties the workflow all together and sets up an api endpoint to post to
 
   @Workflow()
   @PostApi("/sendemail/:friend/:content")
