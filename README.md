@@ -24,9 +24,9 @@ The repo sets up two simple HTTP API endpoints that: 1) sends an email using Pos
 
 3. To deploy to DBOS-cloud, login with this, "**_npx dbos-cloud login_**" and follow the instructions to match the uuid given in the console to the one in the browser, then standard login user/password applies.
 
-4. Next provision a d'base instance: "**_npx dbos-cloud db provision <database-instance-name> -U <database-username>_**"
+4. Next provision a d'base instance: "**_npx dbos-cloud db provision database-instance-name -U database-username_**"
 
-5. Register your app with the d'base instance: "**_npx dbos-cloud app register -d <database-instance-name>_**"
+5. Register your app with the d'base instance: "**_npx dbos-cloud app register -d database-instance-name_**"
 
 6. To use secrets in DBOS, add your variables in the cli like this:
 
