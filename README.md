@@ -58,7 +58,7 @@ Here are some instructions for that: https://docs.dbos.dev/tutorials/authenticat
 
 - When building workflows with DBOS, consider creating the respective standalone functions, then wrapping them in an Httpapi decorator / function, then trying to wrap all that in a @ workflow which will orchestrate a bunch of cool built-in features.
 
--- granular observaibility
+-- granular observability
 -- guaranteed only once execution
 -- asynchronous execution
 -- precise management and observability of workflows
